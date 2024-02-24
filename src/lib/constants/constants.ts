@@ -1,4 +1,4 @@
-import AdTypeEnum from "../enums/AdTypeEnum";
+import { AdTypeEnum } from "../enums/enums";
 import { AdTypeData } from "../types/types";
 
 const adTypes: AdTypeData[] = [

@@ -6,4 +6,4 @@ enum AdTypeEnum {
   Service = 4,
 }
 
-export default AdTypeEnum;
+export { AdTypeEnum };

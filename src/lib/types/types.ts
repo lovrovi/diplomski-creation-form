@@ -1,4 +1,4 @@
-import AdTypeEnum from "../enums/AdTypeEnum";
+import { AdTypeEnum } from "../enums/enums";
 
 type AdTypeData = {
   id: AdTypeEnum;
@@ -8,7 +8,7 @@ type AdTypeData = {
 type Advertisement = {
   title: string;
   content: string;
-  adType: AdTypeEnum;
+  adType: AdTypeEnum | string;
 };
 
 export type { AdTypeData, Advertisement };

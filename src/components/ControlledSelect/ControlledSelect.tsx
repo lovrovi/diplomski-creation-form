@@ -26,14 +26,17 @@ export const ControlledSelect = ({
   });
 
   return (
-    <FormControl sx={{ minWidth: "15rem" }} error={invalid}>
-      <InputLabel>{label}</InputLabel>
+    <FormControl sx={{ minWidth: "12rem" }} error={invalid}>
+      <InputLabel id={`select-${name}-label`}>{label}</InputLabel>
       <Select
+        labelId={`select-${name}-label`}
+        variant="standard"
         value={value}
         label={label}
         onChange={onChange}
         onBlur={onBlur}
         disabled={disabled}
+        autoWidth
       >
         {data?.map((item) => (
           <MenuItem key={item.id} value={item.id}>

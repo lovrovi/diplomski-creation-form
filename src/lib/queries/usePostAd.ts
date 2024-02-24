@@ -1,6 +1,6 @@
-import axios from "../axiosConfig/axiosConfig";
 import { useMutation } from "@tanstack/react-query";
-import AdTypeEnum from "../enums/AdTypeEnum";
+import axios from "../axiosConfig/axiosConfig";
+import { AdTypeEnum } from "../enums/enums";
 
 type usePostAdsDataType = {
   title: string;
@@ -9,7 +9,6 @@ type usePostAdsDataType = {
 };
 
 const getAds = (data: usePostAdsDataType) => {
-  console.log(data);
   return axios.post("/advertisements", data);
 };
 

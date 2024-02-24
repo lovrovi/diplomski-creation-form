@@ -11,7 +11,7 @@ type ControlledTextFieldProps = {
 export const ControlledTextField = ({
   name,
   control,
-  multiline,
+  multiline = false,
   ...props
 }: ControlledTextFieldProps) => {
   const {
@@ -33,7 +33,10 @@ export const ControlledTextField = ({
       helperText={error?.message}
       InputLabelProps={{ sx: { textTransform: "capitalize" } }}
       multiline={multiline}
+      rows={multiline ? 4 : 0}
       sx={{ mt: 2 }}
+      variant={multiline ? "outlined" : "standard"}
+      fullWidth
       {...props}
     />
   );
